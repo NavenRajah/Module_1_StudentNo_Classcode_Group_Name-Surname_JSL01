@@ -1,12 +1,20 @@
-function validateSyntax() {
-    let input = document.getElementById('petInput').value;
-    // Validation logic goes here
-    let result = ''; // Placeholder for validation result
+function validatePetAdoptionDetail(input) {
+    // Regular expression to check the syntax: starts with "pet_" followed by letters and numbers
+    const regex = /^pet_[a-zA-Z0-9]+$/;
 
-    // TODO: Write your validation logic here
-        // Check if input starts with 'pet_' and followed by alphanumeric characters
-
-            document.getElementById('result').innerText = result;
+    // Test the input against the regex
+    if (regex.test(input)) {
+        return "Valid Syntax";
+    } else {
+        return "Invalid Syntax";
+    }
 }
 
-
+function validateInput() {
+    // Get the input value from the form
+    const petDetail = document.getElementById("petDetail").value;
+    // Validate the input
+    const result = validatePetAdoptionDetail(petDetail);
+    // Display the result
+    document.getElementById("result").textContent = result;
+}

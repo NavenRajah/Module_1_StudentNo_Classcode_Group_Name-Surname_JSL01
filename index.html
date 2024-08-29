@@ -3,15 +3,20 @@
 <head>
     <title>Pet Adoption Validator</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <h2>Pet Adoption Syntax Validator</h2>
-    <h3>Note to all SPCA volunteers 📝</h3>
+    <h3>Note to all SPCA volunteers <i class='fas fa-dog' style='font-size:48px;color:#134aa7'></i></h3>
     <p>All pet adoption codes start with "pet_" and then the pet's birth year and name.</p>
     <p><strong>Example:</strong> pet_2015Forrest</p>
-    <input type="text" id="petInput" placeholder="Enter pet adoption detail">
-    <button onclick="validateSyntax()">Validate</button>
-    <p id="result"></p>
+    <form id="petForm">
+        <label for="petDetail">Enter Pet Adoption Detail:</label>
+        <input type="text" id="petDetail" placeholder="e.g., pet_Fido123">
+        <button type="button" onclick="validateInput()">Check Validity <i class='fas fa-dog'></i> </button>
+        <p id="result"></p>
+    </form>
+</div>
 </body>
 </html>
